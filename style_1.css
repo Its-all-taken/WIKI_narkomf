@@ -1,0 +1,78 @@
+body{
+  font-family: 'PT Sans Caption', sans-serif;
+}
+h1,h2,h3,h4,h5,p,blockquote,ul,ol{
+  width: 800px;
+  margin: 0 auto;
+}
+div{
+  margin-bottom: 64px;
+}
+img{
+  width: 1020px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 90px;
+}
+h1{
+  font-size: 38px;
+  line-height: 45px;
+  margin-top: 80px;
+  margin-bottom: 36px;
+  font-weight:700;
+}
+h2{
+  font-size: 32px;
+  font-weight:700;
+  line-height: 36px;
+  margin-bottom: 28px;
+}
+h3{
+  font-weight:700;
+  font-size: 30px;
+  margin-top: 56px;
+  margin-bottom: 28px;
+}
+h4{
+  font-weight:700;
+  font-size: 25px;
+  margin-bottom: 28px;
+}
+p{
+  margin-bottom: 52px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 34px;
+}
+blockquote{
+  font-style: italic;
+  line-height: 34px;
+  font-size: 20px;
+  margin-bottom: 52px;
+  position: relative;
+}
+blockquote::before{
+  content: "";
+  position: absolute;
+  width: 3px;
+  background: black;
+  height: 100%;
+  left: -23px;
+}
+.p1{
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 22px;
+  line-height: 35px;
+}
+ul{
+  margin: 52px inherit;
+  list-style-type: disc;
+}
+ul li{
+  margin-left: 30px;
+}
+li{
+  font-size: 22px;
+  line-height: 33px;
+  margin-bottom: 40px;
+}
