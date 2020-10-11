@@ -20,7 +20,7 @@
         right: 0;
         top:0;
         bottom: 0;
-        background: url('images/1440.jpg');
+        /* background: url('images/1440.jpg'); */
         height: 100%;
         display: block;
         opacity: .2;
@@ -61,9 +61,11 @@
       section div:nth-of-type(2) img {
         margin-left: 0;
       }
-      section div:nth-of-type(2) h1,
-      section div:nth-of-type(2) img{
-        margin-top: 10px;
+      section div:nth-of-type(2) h1,{
+        margin-top: 40px;
+      }
+      section:nth-of-type(2) img{
+      margin-top: 50px;
       }
       .bottom_block p,
       .bottom_block h1{
@@ -73,8 +75,8 @@
       }
       .bottom_block{
         text-align: center;
-        padding-top: 70px;
-        margin-top: 50px;
+        padding-top: 40px;
+        margin-top: 0px;
         border-top: 1px solid #bbb;
       }
       .btn{
@@ -92,6 +94,13 @@
         background-color: black;
         border-color: black;
       }
+      section img{
+        height: 700px;
+        /* margin: 80px 0 0 40px; */
+      }
+    .img3{
+      margin-top: 70px;
+    }
     </style>
   </head>
   <body>
@@ -127,7 +136,7 @@
         <p>Обучение приближено к работе в реальной жизни, работа разбита на этапы от типографики, создания меню и использования эффектов, до адаптации под мобильные устройства и использования JavaScript скриптов</p>
       </div>
       <div>
-        <img src="images/about-3.png" alt="img1">
+        <img class="img3" src="images/about-3.png" alt="img1">
       </div>
     </section>
 
