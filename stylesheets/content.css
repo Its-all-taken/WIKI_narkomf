@@ -3,9 +3,11 @@ article > *{ width: 700px; margin: 0 auto;
 article h1, article h2, article h3, article h4 { font-family: 'PT Sans Caption', sans-serif; font-weight: bold;
 }
 article ul{
+	padding-left: 20px;
 	list-style-type: disc;
 }
 article ol{
+	padding-left: 20px;
   list-style-type: decimal;
 }
 article p, article blockquote, article li { margin-top: 29px; font-size: 20px; line-height: 34px;
