@@ -12,4 +12,5 @@
 @media all and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
 	body { min-width: 320px; }
 	article > * { width: calc(100% - 40px); }
+	.index-item{ width: calc(100% - 40px); }
 }
