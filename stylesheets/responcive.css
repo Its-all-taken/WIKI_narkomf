@@ -8,8 +8,6 @@
 }
 @media all and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
 	article > * { width: calc(100% - 40px);}
-	section div p,section div h1,{width: 60%}
-	section div:nth-of-type(1){margin-left: -100px;}
 	#a{margin-left: 100px;}
 	#b{margin-left: 100px;}
 }
@@ -17,7 +15,4 @@
 	body { min-width: 320px; }
 	article > * { width: calc(100% - 40px); }
 	.index-item{ width: calc(100% - 40px); }
-	.btn-black{margin-top: 20px}
-	section div p{font-size: 18px;line-height: 20px; width: 100%}
-	section div h1{font-size: 24px;line-height: 30px; width: 100%}
 }
