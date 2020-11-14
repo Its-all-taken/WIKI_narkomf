@@ -3,17 +3,98 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style media="screen">
+      div { width: 100px; height: 100px; background: black; margin: 200px auto;}
+      .square1{ animation: first 3s infinite}
+      @keyframes first {
+        20%{transform: skewX(10deg)translateX(500px);}
+        90%{transform: translateX(-50px);}
+      }
+      .square2{animation: second 5s infinite ease-in-out}
+      @keyframes second {
+        0%{transform: translateX(0);}
+        20%{transform: translateX(10px)skewX(5deg); }
+        30%{transform: translateX(20px);}
+        40%{transform: translateX(30px)skewX(5deg);}
+        50%{transform: translateX(40px);}
+        60%{transform: translateX(30px)skewX(5deg);}
+        70%{transform: translateX(20px);}
+        80%{transform: translateX(10px)skewX(5deg); }
+        90%{transform: translateX(0);}
+      }
+      .square3{animation: third 4s infinite ease-out}
+      @keyframes third {
+        0%{border-radius: 0 0 0 0;}
+        15%{border-radius: 20px 0 0 0;transform: rotate(45deg);}
+        30%{border-radius: 20px 20px 0 0;transform: rotate(90deg);}
+        45%{border-radius: 20px 20px 20px 0;transform: rotate(135deg);}
+        60%{border-radius: 20px 20px 20px 20px;transform: rotate(180deg);}
+      }
+      .square4{animation: fourth 5s infinite ease-out}
+      @keyframes fourth {
+        0%{opacity:1;transform: scale(1);}
+        30%{ opacity:.6;transform: scale(1.75);}
+      }
+      .square5{animation: fifth .8s infinite}
+      @keyframes fifth {
+        0%{transform: translateY(0px) scale(1.2, 0.85);}
+        50%{transform:scale(0.6, 1);}
+        100%{transform: translateY(0px) scale(1.2, 0.85);}
+      }
+      .square6{animation: sixth 5s infinite linear}
+      @keyframes sixth {
+        0%{}
+        10%{transform: translateX(400px) skewX(40deg);}
+        20%{transform: skewX(0);}
+        30%{transform: translateX(-400px) skewX(-40deg);}
+        40%{transform: skewX(0);}
+      }
+      .square7{animation: seventh 1s infinite ease-in}
+      @keyframes seventh {
+        0%{transform: translateY(-4em) scaleY(.6);}
+        50%{transform: translateY(4em);}
+        70%{transform: translateY(4em)scaleY(.6);}
+        100%{transform: translateY(-4em) scaleY(.6);}
+      }
+      .square8{animation: eight 2s infinite ease-out}
+        @keyframes eight{
+          0%{}
+          25%{}
+          50%{transform: translateY(1em)rotate(5deg);}
+          100%{}
+        }
+      .square9{animation: ninth 2s infinite linear}
+        @keyframes ninth {
+          0%{}
+          10%{transform: translateY(5em)translateX(5em)scaleY(.6)}
+          20%{transform: translateY(-2em)translateX(9em)}
+          40%{transform: translateY(5em)translateX(13em)}
+          100%{transform: translateY(5em)translateX(13em)}
+        }
+      .square10{animation: tenth 1s infinite ease-in}
+        @keyframes tenth {
+          0%{}
+          20%{transform: translateY(6em)scaleY(.6);}
+          50%{transform: translateY(6em)scaleY(.6); opacity: .5;}
+          55%{transform: translateY(6em)scaleY(.6); opacity: .1;}
+          60%{transform: translateY(6em)scaleY(.6); opacity: .5;}
+          65%{transform: translateY(6em)scaleY(.6); opacity: .1;}
+          70%{transform: translateY(6em)scaleY(.6); opacity: .5;}
+          75%{transform: translateY(6em)scaleY(.6); opacity: .1;}
+          100%{}
+        }
+    </style>
   </head>
   <body>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div class="square1"></div>
+    <div class="square2"></div>
+    <div class="square3"></div>
+    <div class="square4"></div>
+    <div class="square5"></div>
+    <div class="square6"></div>
+    <div class="square7"></div>
+    <div class="square8"></div>
+    <div class="square9"></div>
+    <div class="square10"></div>
   </body>
 </html>
