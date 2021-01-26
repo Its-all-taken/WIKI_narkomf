@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="js\jquery-3.5.1.js" charset="utf-8"></script>
+    <style media="screen">
+      .box{
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        background: gray;
+        transition: opacity .2s;
+      }
+      .red{
+        background: red;
+      }
+      .blue{
+        background: blue;
+        position: absolute;
+        left: 300px;
+        top: 100px;
+      }
+      .black{
+        background: black;
+      }
+      .hidden{
+        opacity: 0;
+      }
+      .blocker{
+        display: none;
+      }
+      .blue.hidden{
+        top: 120px;
+      }
+    </style>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    	$(".red, .orange").click(function(){
+
+    		$(".blue.hidden").removeClass("blocker");
+
+        setTimeout(function(){
+          $(".blue").toggleSlass("hidden");
+        }, 1);
+
+        setTimeout(function(){
+          $(".blue.hidden").addClass("blocker");
+        }, 300);
+    	});
+    });
+    </script>
+  </head>
+  <body>
+    <div class="box red"></div>
+    <div class="box blue"></div>
+    <div class="box orange"></div>
+  </body>
+</html>
