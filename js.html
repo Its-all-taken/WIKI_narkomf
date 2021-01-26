@@ -33,21 +33,28 @@
       .blue.hidden{
         top: 120px;
       }
+      .rounder{
+        border-radius: 40px;
+        background-color: green;
+      }
     </style>
     <script type="text/javascript">
     $(document).ready(function(){
-    	$(".red, .orange").click(function(){
+    	$(".red, .orange, .blue").click(function(){
 
     		$(".blue.hidden").removeClass("blocker");
 
         setTimeout(function(){
-          $(".blue").toggleSlass("hidden");
+          $(".blue").toggleClass("hidden");
         }, 1);
 
         setTimeout(function(){
           $(".blue.hidden").addClass("blocker");
         }, 300);
     	});
+      $(".red").click(function () {
+        $(this).toggleClass("rounder");
+      })
     });
     </script>
   </head>
