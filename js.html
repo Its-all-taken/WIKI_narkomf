@@ -37,17 +37,47 @@
         border-radius: 40px;
         background-color: green;
       }
+      .twist{
+        transform: skewX(10deg);
+        background-color: whitesmoke;
+      }
+      .gradient{
+        transition: color 1s ease;
+        transform: skewX(0deg);
+        background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+      }
+      .overlay{
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background: radial-gradient(77.25% 77.25% at 50% 50%, rgba(207, 131, 41, 0) 0%, #CF8329 100%);
+      }
+      .overlay-b{
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background: radial-gradient(77.25% 77.25% at 50% 50%, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+      }
+      .button{
+        width: 150px;
+        height: 50px;
+        background-color: black;
+        color: white;
+      }
     </style>
     <script type="text/javascript">
     $(document).ready(function(){
     	$(".red, .orange, .blue").click(function(){
-
     		$(".blue.hidden").removeClass("blocker");
-
         setTimeout(function(){
           $(".blue").toggleClass("hidden");
         }, 1);
-
         setTimeout(function(){
           $(".blue.hidden").addClass("blocker");
         }, 300);
@@ -55,6 +85,24 @@
       $(".red").click(function () {
         $(this).toggleClass("rounder");
       })
+      $(".twist").mouseenter(function (){
+        $(".twist").addClass("gradient")
+      })
+      $(".twist").mouseleave(function (){
+        $(".twist").removeClass("gradient")
+      })
+      $(".twist").click(function (){
+        $(".overlay").toggleClass("blocker")
+      })
+      $(".button").click(function (){
+        $(".overlay-b").toggleClass("blocker")
+      })
+      if ($(".box.overlay").not("blocker")) {
+        $(".box.overlay-b").addClass("blocker");
+      }
+      if ($(".box.overlay-b").not("blocker")) {
+        $(".box.overlay").addClass("blocker");
+      }
     });
     </script>
   </head>
@@ -62,5 +110,9 @@
     <div class="box red"></div>
     <div class="box blue"></div>
     <div class="box orange"></div>
+    <div class="box twist"></div>
+    <div class="box overlay blocker"></div>
+    <div class="button"></div>
+    <div class="box overlay-b blocker"></div>
   </body>
 </html>
